@@ -1,6 +1,6 @@
 .github
 .firebase.json
-.firebase.rc
+.firebaserc
 
 # Logs
 logs
