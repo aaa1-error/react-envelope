@@ -11,7 +11,7 @@ const LilEnvelope = (props : Props) => {
         imageRendering: '-webkit-optimize-contrast',
         background: "black"
       }}
-      src="./src/assets/envelope.png" alt=""
+      src="/envelope.png" alt=""
     />
   )
 }
