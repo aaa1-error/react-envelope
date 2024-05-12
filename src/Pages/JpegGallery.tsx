@@ -1,5 +1,5 @@
 import { cold_faces, crossfire, doublecross, rapidcore, stalkx } from "../data"
-import Jpeg from "./Jpeg"
+import Jpeg from "../Components/Jpeg"
 import AscendingAnimation from "../Components/AscendingAnimation"
 
 const jpegs = [...crossfire, ...doublecross, ...rapidcore, ...stalkx, ...cold_faces]

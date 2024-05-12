@@ -5,25 +5,6 @@ import { animated, config, useSpring } from '@react-spring/web'
 import LilEnvelope from '../Components/LilEnvelope'
 
 const Index = () => {
-  /* const [envelopes, set] = useState<Envelope[]>([])
-
-  useEffect(() => {
-    const rofls: Envelope[] = []
-
-    for (let i = 0; i <= 32; i++) {
-      rofls.push({
-        offset: Math.random() - 0.2,
-        speed: Math.random() * 1,
-        translateX: Math.random() * 100,
-        rotate: Math.random() * 64 - 32
-      })
-    }
-
-    set(rofls)
-  }, []) */
-
-
-  //32, [0.2, 1], [0, 1], [0, 100], [-32, 32]
   const enve = useEnvelopes({
     count: 32,
     offset: [0.2, 1],
@@ -79,10 +60,6 @@ const Index = () => {
 
         <ParallaxLayer offset={1} speed={0}>
           {JpegGallery()}
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.9} speed={0}>
-
         </ParallaxLayer>
 
         {enve.map((item, index) => (
