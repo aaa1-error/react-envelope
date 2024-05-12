@@ -16,7 +16,10 @@ const AscendingAnimation = (props : Props) => {
         height: 100
       },
       config: config.slow
-    })
+    }),
+    {
+      once: true
+    }
   )
 
 

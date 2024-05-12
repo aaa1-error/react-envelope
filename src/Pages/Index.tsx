@@ -1,6 +1,8 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { Link } from 'react-router-dom'
 import { useEnvelopes } from '../hooks/useEnvelopes'
+import { animated, config, useSpring } from '@react-spring/web'
+import LilEnvelope from '../Components/LilEnvelope'
 
 const Index = () => {
   /* const [envelopes, set] = useState<Envelope[]>([])
@@ -30,6 +32,16 @@ const Index = () => {
     rotate: [-32, 32]
   })
 
+  const styles = useSpring({
+    from: {
+      opacity: 0
+    },
+    to: {
+      opacity: 1
+    },
+    config: config.slow
+  })
+
   const JpegGallery = () => {
     return (
       <div className='flex flex-col w-full h-[200vh] py-64'>
@@ -48,44 +60,38 @@ const Index = () => {
   }
 
   return (
-
-    <Parallax pages={1.9}>
-      <ParallaxLayer offset={0.2} speed={-2}>
-        <div className='w-full text-center oswald text-7xl'>
-          <div>ENVELOPE</div>
-          <div>ENVELOPE</div>
-          <div>ENVELOPE</div>
-          <div>ENVELOPE</div>
-          <div>ENVELOPE</div>
-        </div>
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={0} speed={0.5} className=''>
-        <img className='w-full min-h-screen object-contain object-bottom' src="./src/assets/angulope.png" alt="envelope" />
-        <img className='w-full h-[200dvh] bg-red-300' src="./src/assets/envelines.png" />
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={1} speed={0}>
-        {JpegGallery()}
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={1.9} speed={0}>
-
-      </ParallaxLayer>
-
-      {enve.map((item, index) => (
-        <ParallaxLayer offset={item.offset} speed={item.speed} key={index} className='pointer-events-none'>
-          <img
-            style={{
-              transform: `translateX(${item.translateX}vw) rotate(${item.rotate}deg)`,
-              imageRendering: '-webkit-optimize-contrast',
-              background: "black"
-            }}
-            src="./src/assets/envelope.png" alt=""
-          />
+    <animated.div style={styles}>
+      <Parallax pages={1.9}>
+        <ParallaxLayer offset={0.2} speed={-2}>
+          <div className='w-full text-center oswald text-7xl'>
+            <div>ENVELOPE</div>
+            <div>ENVELOPE</div>
+            <div>ENVELOPE</div>
+            <div>ENVELOPE</div>
+            <div>ENVELOPE</div>
+          </div>
         </ParallaxLayer>
-      ))}
-    </Parallax>
+
+        <ParallaxLayer offset={0} speed={0.5} className=''>
+          <img className='w-full min-h-screen object-contain object-bottom' src="./src/assets/angulope.png" alt="envelope" />
+          <img className='w-full h-[200dvh] bg-red-300' src="./src/assets/envelines.png" />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={1} speed={0}>
+          {JpegGallery()}
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={1.9} speed={0}>
+
+        </ParallaxLayer>
+
+        {enve.map((item, index) => (
+          <ParallaxLayer offset={item.offset} speed={item.speed} key={index} className='pointer-events-none'>
+            <LilEnvelope translateX={item.translateX} rotate={item.rotate}/>
+          </ParallaxLayer>
+        ))}
+      </Parallax>
+    </animated.div>
   )
 }
 

@@ -4,17 +4,8 @@ import AscendingAnimation from '../Components/AscendingAnimation';
 
 const NotFound = () => {
   const nav = useNavigate()
-
   const back = () => nav("");
   
-  // const envelopes = useEnvelopes({
-  //   count: 32,
-  //   offset: [0, 100],
-  //   speed: [0, 0],
-  //   translateX: [0, 100],
-  //   rotate: [-32, 32]
-  // })
-
   return (
     <div className='h-screen flex items-center justify-center bg-lines90'>
       <div className='flex flex-col gap-2'>

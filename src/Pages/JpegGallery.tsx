@@ -13,7 +13,7 @@ const JpegGallery = () => {
           <header className="overflow-hidden text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight">HALF-LIFE.JPEG</header >
         </AscendingAnimation>
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4 md:gap-8">
         {jpegs.map((item, index) => (
           <Jpeg image={item} key={index}/>
         ))}
