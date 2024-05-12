@@ -1,7 +1,7 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { Link } from 'react-router-dom'
 import { useEnvelopes } from '../hooks/useEnvelopes'
-import { animated, config, useSpring } from '@react-spring/web'
+import { animated, useSpring } from '@react-spring/web'
 import LilEnvelope from '../Components/LilEnvelope'
 
 const Index = () => {
@@ -20,7 +20,9 @@ const Index = () => {
     to: {
       opacity: 1
     },
-    config: config.slow
+    config: {
+      duration: 2000
+    }
   })
 
   const JpegGallery = () => {
