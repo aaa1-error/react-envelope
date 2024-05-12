@@ -1,9 +1,10 @@
-import { cold_faces, crossfire, doublecross, rapidcore, stalkx } from "../data"
+import { crossfire, stalkx } from "../data"
 import Jpeg from "../Components/Jpeg"
 import AscendingAnimation from "../Components/AscendingAnimation"
 import { animated, useSpring } from "@react-spring/web"
 
-const jpegs = [...crossfire, ...doublecross, ...rapidcore, ...stalkx, ...cold_faces]
+//const jpegs = [...crossfire, ...doublecross, ...rapidcore, ...stalkx, ...cold_faces]
+const jpegs = [...stalkx, ...crossfire]
 
 const JpegGallery = () => {
   const styles = useSpring({
