@@ -55,7 +55,7 @@ const Index = () => {
 
         <ParallaxLayer offset={0} speed={0.5} className=''>
           <img className='w-full min-h-screen object-contain object-bottom' src="./src/assets/angulope.png" alt="envelope" />
-          <img className='w-full h-[200dvh] bg-red-300' src="./src/assets/envelines.png" />
+          <img className='w-full h-[200dvh]' src="./src/assets/envelines.png" />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0}>
