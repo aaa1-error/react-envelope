@@ -1,3 +1,7 @@
+.github
+.firebase.json
+.firebase.rc
+
 # Logs
 logs
 *.log
