@@ -6,11 +6,11 @@ import LilEnvelope from '../Components/LilEnvelope'
 
 const Index = () => {
   const enve = useEnvelopes({
-    count: 32,
-    offset: [0.2, 1],
+    count: 48,
+    offset: [0, 1],
     speed: [0, 1],
     translateX: [0, 100],
-    rotate: [-32, 32]
+    rotate: [-64, 64]
   })
 
   const styles = useSpring({
