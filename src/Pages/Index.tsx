@@ -31,7 +31,7 @@ const Index = () => {
         <div className='flex flex-col justify-evenly w-full xs:flex-row self-center gap-2 p-4'>
           <div>
             <div className='oswald text-4xl'>Галерея джипегов</div>
-            <div className='font-bold text-sm'>ENVELOPE.ANGULAR.MIDDLEWARE.LOG.JPEG</div>
+            {/* <div className='font-bold text-sm'>ENVELOPE.ANGULAR.MIDDLEWARE.LOG.JPEG</div> */}
             <div className='whitespace-pre-wrap text-sm'>Сборник jpeg'ов, которые я создал в Half-Life</div>
           </div>
           <div className='flex items-center'>
