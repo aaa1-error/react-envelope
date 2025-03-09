@@ -14,5 +14,4 @@ yarn build
 ```
 
 # Live demo
-Firebase: https://react-envelope.web.app/ (works well) <br>
-Vercel: https://react-envelope.vercel.app/ (images load slowly, cuz Vercel limits the speed)
+Firebase: https://react-envelope.web.app/
